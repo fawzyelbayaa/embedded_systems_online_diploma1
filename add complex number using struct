@@ -1,0 +1,48 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 5, 2021
+ *      Author: fawzy
+ */
+#include "stdio.h"
+struct s_complex
+{
+	float real;
+	float img;
+};
+struct s_complex complex(struct s_complex y);
+int main()
+{
+	struct s_complex result;
+	result = complex(result);
+	printf("sum %.1f+%.1fi",result.real , result.img);
+
+
+
+
+
+	return 0;
+
+}
+struct s_complex complex(struct s_complex z)
+{
+	struct s_complex x,y;
+	printf("for 1st complex number\n");
+	printf("enter real and imaginary respective :");
+	fflush(stdin);   fflush(stdout);
+	scanf("%f",&x.real);
+	scanf("%f",&x.img);
+
+	printf("for 2st complex number\n");
+	printf("enter real and imaginary respective :");
+	fflush(stdin);   fflush(stdout);
+	scanf("%f",&y.real);
+	scanf("%f",&y.img);
+	z.real =x.real + y.real;
+	z.img = x.img  + y.img ;
+
+	return z;
+
+}
+
+
