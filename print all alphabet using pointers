@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 26, 2021
+ *      Author: fawzy
+ */
+#include "stdio.h"
+char arr[27];
+char *ptr=arr;
+int main()
+{
+	int i;
+	for(i=0 ;i<26;i++)
+	{
+		*ptr =i+'A';
+		ptr++;
+	}
+
+	printf("the alphabet are :");
+	ptr=arr;
+	for(i=0 ;i<26 ;i++,ptr++)
+	{
+		printf("%c\t",*ptr);
+	}
+
+}
+
+
