@@ -1,0 +1,45 @@
+/*
+ * main.c
+ *
+ *  Created on: Sep 20, 2021
+ *      Author: fawzy
+ */
+#include"stdio.h"
+void sort_arr(int p[],int n)
+{
+	int i,j,temp;
+	for(i=0;i<n-1 ;i++)
+	{
+		for(j=i ; j<n ;j++)
+		{
+			if(p[i]>p[j])
+			{
+				temp =p[i];
+				p[i]= p[j];
+				p[j]=temp;
+			}
+		}
+	}
+
+}
+int main()
+{
+	int values[5];
+	int i;
+	for(i=0 ;i<5 ;i++)
+	{
+		scanf("%d",&values[i]);
+	}
+	sort_arr(values ,5);
+	for(i=0 ;i<5 ;i++)
+	{
+		printf("%d\n",values[i]);
+
+	}
+
+
+
+	return 0;
+}
+
+
